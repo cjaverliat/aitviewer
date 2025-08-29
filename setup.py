@@ -12,7 +12,7 @@ requirements = [
     "torch>=1.6.0",
     "numpy>=1.18,<2",
     "smplx",
-    "moderngl-window>=2.4.3,<=2.4.6",
+    "moderngl-window>=2.4.3,<3",
     "moderngl>=5.8.2,<6",
     "imgui==2.0.0",
     "tqdm>=4.60.0",
