@@ -6,11 +6,11 @@ from setuptools import find_packages, setup
 from aitviewer import __version__
 
 INSTALL_PYQT6 = os.getenv("AITVIEWER_INSTALL_PYQT6", 0)
+HEADLESS = os.getenv("AITVIEWER_HEADLESS", 0)
 
 requirements = [
     "torch>=1.6.0",
     "numpy>=1.18,<2",
-    "opencv-contrib-python-headless>=4.5.1.48",
     "smplx",
     "moderngl-window>=2.4.3,<=2.4.6",
     "moderngl>=5.8.2,<6",
@@ -27,6 +27,11 @@ requirements = [
     "websockets",
     "usd-core>=23.5",
 ]
+
+if HEADLESS:
+    requirements.append("opencv-python-headless>=4.5")
+else:
+    requirements.append("opencv-python>=4.5")
 
 # Choose PyQt version depending on environment variable.
 if INSTALL_PYQT6:
