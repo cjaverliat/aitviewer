@@ -12,6 +12,12 @@ pip install aitviewer
 ```
 Note that this does not install the GPU-version of PyTorch automatically. If your environment already contains it, you should be good to go, otherwise install it manually.
 
+For headless installation (e.g., for server environments without display):
+```commandline
+HEADLESS=1 pip install aitviewer
+```
+This will install `opencv-python-headless` instead of the full OpenCV package, which is useful when you don't need GUI capabilities.
+
 Or install locally (if you need to extend or modify code)
 ```commandline
 git clone git@github.com:eth-ait/aitviewer.git
