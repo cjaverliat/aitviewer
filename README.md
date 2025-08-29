@@ -14,7 +14,7 @@ Note that this does not install the GPU-version of PyTorch automatically. If you
 
 For headless installation (e.g., for server environments without display):
 ```commandline
-HEADLESS=1 pip install aitviewer
+AITVIEWER_HEADLESS=1 pip install aitviewer
 ```
 This will install `opencv-python-headless` instead of the full OpenCV package, which is useful when you don't need GUI capabilities.
 
